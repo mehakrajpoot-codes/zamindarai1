@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </main>
       <section className="border-t border-[#2A3B2A]">
-        <div className="max-w-5xl mx-auto px-8 py-16 grid sm:grid-cols-3 gap-10">
+        <div className="max-w-5xl mx-auto px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <a href="/crop-doctor" className="block hover:opacity-80 transition-opacity">
             <p className="text-[#8FBC6A] text-sm font-medium mb-2">Crop Doctor</p>
             <p className="text-[#A8B5A0] text-sm leading-relaxed">Fasal ki photo se bimari ki tashkhees aur ilaj.</p>
@@ -31,6 +31,10 @@ export default function Home() {
           <a href="/deal-guardian" className="block hover:opacity-80 transition-opacity">
             <p className="text-[#8FBC6A] text-sm font-medium mb-2">Deal Guardian</p>
             <p className="text-[#A8B5A0] text-sm leading-relaxed">Mehfooz, verify-able sale contracts.</p>
+          </a>
+          <a href="/weather-alert" className="block hover:opacity-80 transition-opacity">
+            <p className="text-[#8FBC6A] text-sm font-medium mb-2">Weather Alert</p>
+            <p className="text-[#A8B5A0] text-sm leading-relaxed">Mausam dekh kar fasal ki hifazat ke mashware.</p>
           </a>
         </div>
       </section>
