@@ -7,23 +7,37 @@ export default function CropDoctor() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
+  const [seconds, setSeconds] = useState(0);
 
   async function handleSubmit() {
     if (!question.trim()) return;
     setLoading(true);
     setAnswer("");
+    setSeconds(0);
+
+    const timer = setInterval(() => {
+      setSeconds((s) => s + 1);
+    }, 1000);
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 30000);
 
     try {
       const res = await fetch("/api/crop-doctor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
+        signal: controller.signal,
       });
       const data = await res.json();
       setAnswer(data.answer || data.error);
     } catch (err) {
-      setAnswer("Kuch masla ho gaya, dobara koshish karein.");
+      setAnswer(
+        "AI abhi thoda busy hai (free service hai, kabhi kabhi der lagti hai). Dobara koshish karein."
+      );
     } finally {
+      clearTimeout(timeoutId);
+      clearInterval(timer);
       setLoading(false);
     }
   }
@@ -58,10 +72,23 @@ export default function CropDoctor() {
         <button
           onClick={handleSubmit}
           disabled={loading}
-          className="mt-4 bg-[#8FBC6A] text-[#0F1C15] font-semibold px-7 py-3 rounded-lg hover:bg-[#7DA85C] transition-colors disabled:opacity-50"
+          className="mt-4 bg-[#8FBC6A] text-[#0F1C15] font-semibold px-7 py-3 rounded-lg hover:bg-[#7DA85C] transition-colors disabled:opacity-50 flex items-center gap-2"
         >
-          {loading ? "Sochh raha hai..." : "Poochein"}
+          {loading ? (
+            <>
+              <span className="inline-block w-4 h-4 border-2 border-[#0F1C15] border-t-transparent rounded-full animate-spin"></span>
+              Sochh raha hai... ({seconds}s)
+            </>
+          ) : (
+            "Poochein"
+          )}
         </button>
+
+        {loading && (
+          <p className="mt-3 text-xs text-[#5A6B55]">
+            AI jawab taiyar kar raha hai, thora intezar karein...
+          </p>
+        )}
 
         {answer && (
           <div className="mt-8 bg-[#16241A] border border-[#2A3B2A] rounded-lg p-6 whitespace-pre-line leading-relaxed">
