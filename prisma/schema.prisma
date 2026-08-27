@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Farmer {
+  id        Int      @id @default(autoincrement())
+  name      String
+  phone     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  contracts Contract[]
+}
+
+model Contract {
+  id         Int      @id @default(autoincrement())
+  contractId String   @unique
+  crop       String
+  quantity   Int
+  rate       Int
+  total      Int
+  createdAt  DateTime @default(now())
+  farmer     Farmer   @relation(fields: [farmerId], references: [id])
+  farmerId   Int
+}
