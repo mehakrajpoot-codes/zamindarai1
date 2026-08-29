@@ -42,46 +42,46 @@ export default function Signup() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F1C15] text-[#F5F1E8] font-sans flex items-center justify-center px-8">
+    <div className="min-h-screen bg-[#2A2118] text-[#2A2118] font-sans flex items-center justify-center px-8">
       <div className="w-full max-w-sm">
         <Link href="/" className="text-lg font-semibold tracking-tight block text-center mb-8">
-          Zamindar<span className="text-[#8FBC6A]">AI</span>
+          Zamindar<span className="text-[#B5622F]">AI</span>
         </Link>
 
         <h1 className="text-2xl font-bold mb-1 text-center">Account Banayein</h1>
-        <p className="text-[#A8B5A0] text-sm mb-8 text-center">
+        <p className="text-[#5C4A38] text-sm mb-8 text-center">
           ZamindarAI use karne ke liye register karein
         </p>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm text-[#A8B5A0] block mb-1">Naam</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">Naam</label>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Aapka naam"
-              className="w-full bg-[#16241A] border border-[#2A3B2A] rounded-lg p-3 text-[#F5F1E8] placeholder-[#5A6B55] focus:outline-none focus:border-[#8FBC6A]"
+              className="w-full bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-3 text-[#2A2118] placeholder-[#5C4A38] focus:outline-none focus:border-[#B5622F]"
             />
           </div>
 
           <div>
-            <label className="text-sm text-[#A8B5A0] block mb-1">Phone Number</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">Phone Number</label>
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="03001234567"
-              className="w-full bg-[#16241A] border border-[#2A3B2A] rounded-lg p-3 text-[#F5F1E8] placeholder-[#5A6B55] focus:outline-none focus:border-[#8FBC6A]"
+              className="w-full bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-3 text-[#2A2118] placeholder-[#5C4A38] focus:outline-none focus:border-[#B5622F]"
             />
           </div>
 
           <div>
-            <label className="text-sm text-[#A8B5A0] block mb-1">Password</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">Password</label>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="••••••••"
-              className="w-full bg-[#16241A] border border-[#2A3B2A] rounded-lg p-3 text-[#F5F1E8] placeholder-[#5A6B55] focus:outline-none focus:border-[#8FBC6A]"
+              className="w-full bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-3 text-[#2A2118] placeholder-[#5C4A38] focus:outline-none focus:border-[#B5622F]"
             />
           </div>
 
@@ -90,15 +90,15 @@ export default function Signup() {
           <button
             onClick={handleSignup}
             disabled={loading}
-            className="w-full bg-[#8FBC6A] text-[#0F1C15] font-semibold px-7 py-3 rounded-lg hover:bg-[#7DA85C] transition-colors disabled:opacity-50"
+            className="w-full bg-[#B5622F] text-[#2A2118] font-semibold px-7 py-3 rounded-lg hover:bg-[#8B4A28] transition-colors disabled:opacity-50"
           >
             {loading ? "Ban raha hai..." : "Account Banayein"}
           </button>
         </div>
 
-        <p className="text-center text-sm text-[#A8B5A0] mt-6">
+        <p className="text-center text-sm text-[#5C4A38] mt-6">
           Pehle se account hai?{" "}
-          <Link href="/login" className="text-[#8FBC6A] hover:underline">
+          <Link href="/login" className="text-[#B5622F] hover:underline">
             Login karein
           </Link>
         </p>

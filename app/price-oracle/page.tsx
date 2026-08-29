@@ -13,14 +13,14 @@ const crops = [
 
 export default function PriceOracle() {
   return (
-    <div className="min-h-screen bg-[#0F1C15] text-[#F5F1E8] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
-          Zamindar<span className="text-[#8FBC6A]">AI</span>
+          Zamindar<span className="text-[#B5622F]">AI</span>
         </Link>
         <Link
           href="/"
-          className="text-sm text-[#A8B5A0] hover:text-[#F5F1E8] transition-colors"
+          className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors"
         >
           ← Wapis
         </Link>
@@ -28,7 +28,7 @@ export default function PriceOracle() {
 
       <main className="max-w-2xl mx-auto px-8 py-12">
         <h1 className="text-3xl font-bold mb-2">Price Oracle</h1>
-        <p className="text-[#A8B5A0] mb-8">
+        <p className="text-[#5C4A38] mb-8">
           Aaj ki mandi rates — sahi daam maloom karein, aarti se dhoka na khayein.
         </p>
 
@@ -36,17 +36,17 @@ export default function PriceOracle() {
           {crops.map((crop) => (
             <div
               key={crop.name}
-              className="flex items-center justify-between bg-[#16241A] border border-[#2A3B2A] rounded-lg p-5"
+              className="flex items-center justify-between bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-5"
             >
               <div>
                 <p className="font-medium">{crop.name}</p>
-                <p className="text-sm text-[#A8B5A0]">fi {crop.unit}</p>
+                <p className="text-sm text-[#5C4A38]">fi {crop.unit}</p>
               </div>
               <div className="text-right">
-                <p className="text-lg font-semibold text-[#8FBC6A]">
+                <p className="text-lg font-semibold text-[#B5622F]">
                   Rs {crop.rate}
                 </p>
-                <p className="text-xs text-[#A8B5A0]">
+                <p className="text-xs text-[#5C4A38]">
                   {crop.trend === "up" && "▲ Barh raha hai"}
                   {crop.trend === "down" && "▼ Gir raha hai"}
                   {crop.trend === "stable" && "● Mustahkam"}
@@ -56,7 +56,7 @@ export default function PriceOracle() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-[#5A6B55] text-center">
+        <p className="mt-8 text-xs text-[#5C4A38] text-center">
           Rates roughly aaj ki mandi ke mutabiq hain. Demo data.
         </p>
       </main>

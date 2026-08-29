@@ -65,31 +65,31 @@ export default function WeatherAlert() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F1C15] text-[#F5F1E8] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
-          Zamindar<span className="text-[#8FBC6A]">AI</span>
+          Zamindar<span className="text-[#B5622F]">AI</span>
         </Link>
-        <Link href="/" className="text-sm text-[#A8B5A0] hover:text-[#F5F1E8] transition-colors">
+        <Link href="/" className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors">
           ← Wapis
         </Link>
       </header>
 
       <main className="max-w-2xl mx-auto px-8 py-12">
         <h1 className="text-3xl font-bold mb-2">Weather Alert</h1>
-        <p className="text-[#A8B5A0] mb-8">
+        <p className="text-[#5C4A38] mb-8">
           Mausam dekh kar fasal ki hifazat ke mashware payein.
         </p>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm text-[#A8B5A0] block mb-1">Apna shehar chunein</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">Apna shehar chunein</label>
             <select
               value={selectedCity.name}
               onChange={(e) =>
                 setSelectedCity(cities.find((c) => c.name === e.target.value) || cities[0])
               }
-              className="w-full bg-[#16241A] border border-[#2A3B2A] rounded-lg p-3 text-[#F5F1E8] focus:outline-none focus:border-[#8FBC6A]"
+              className="w-full bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-3 text-[#2A2118] focus:outline-none focus:border-[#B5622F]"
             >
               {cities.map((city) => (
                 <option key={city.name} value={city.name}>
@@ -102,7 +102,7 @@ export default function WeatherAlert() {
           <button
             onClick={checkWeather}
             disabled={loading}
-            className="bg-[#8FBC6A] text-[#0F1C15] font-semibold px-7 py-3 rounded-lg hover:bg-[#7DA85C] transition-colors disabled:opacity-50"
+            className="bg-[#B5622F] text-[#2A2118] font-semibold px-7 py-3 rounded-lg hover:bg-[#8B4A28] transition-colors disabled:opacity-50"
           >
             {loading ? "Mausam check ho raha hai..." : "Mausam Dekhein"}
           </button>
@@ -110,31 +110,31 @@ export default function WeatherAlert() {
 
         {weather && (
           <div className="mt-8 space-y-4">
-            <div className="bg-[#16241A] border border-[#2A3B2A] rounded-lg p-6">
-              <p className="text-[#8FBC6A] text-sm font-medium mb-4">
+            <div className="bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-6">
+              <p className="text-[#B5622F] text-sm font-medium mb-4">
                 {selectedCity.name} ka mausam
               </p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <p className="text-2xl font-bold">{weather.temp}°C</p>
-                  <p className="text-xs text-[#A8B5A0]">Temperature</p>
+                  <p className="text-xs text-[#5C4A38]">Temperature</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold">{weather.rainChance}%</p>
-                  <p className="text-xs text-[#A8B5A0]">Barish ka chance</p>
+                  <p className="text-xs text-[#5C4A38]">Barish ka chance</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold">{weather.windSpeed}</p>
-                  <p className="text-xs text-[#A8B5A0]">Hawa (km/h)</p>
+                  <p className="text-xs text-[#5C4A38]">Hawa (km/h)</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#16241A] border border-[#8FBC6A] rounded-lg p-6">
-              <p className="text-[#8FBC6A] text-sm font-medium mb-3">Mashware</p>
+            <div className="bg-[#EDE3D0] border border-[#B5622F] rounded-lg p-6">
+              <p className="text-[#B5622F] text-sm font-medium mb-3">Mashware</p>
               <ul className="space-y-2 text-sm">
                 {getAdvice()?.map((tip, i) => (
-                  <li key={i} className="text-[#F5F1E8]">• {tip}</li>
+                  <li key={i} className="text-[#2A2118]">• {tip}</li>
                 ))}
               </ul>
             </div>
