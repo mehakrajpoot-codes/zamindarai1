@@ -32,25 +32,25 @@ export default function SoilAdvisor() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans" dir="rtl">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           Zamindar<span className="text-[#B5622F]">AI</span>
         </Link>
         <Link href="/" className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors">
-          ← Wapis
+          ← واپس
         </Link>
       </header>
 
       <main className="max-w-2xl mx-auto px-8 py-12">
-        <h1 className="text-3xl font-bold mb-2">Soil Advisor</h1>
+        <h1 className="text-3xl font-bold mb-2">مٹی کا مشیر</h1>
         <p className="text-[#5C4A38] mb-8">
-          Apni mitti aur fasal batayein, khaad aur paani ke mashware payein.
+          اپنی مٹی اور فصل بتائیں، خاد اور پانی کے مشورے پائیں۔
         </p>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm text-[#5C4A38] block mb-1">Mitti ki qisam</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">مٹی کی قسم</label>
             <select
               value={soilType}
               onChange={(e) => setSoilType(e.target.value)}
@@ -80,7 +80,7 @@ export default function SoilAdvisor() {
             disabled={loading}
             className="bg-[#B5622F] text-[#2A2118] font-semibold px-7 py-3 rounded-lg hover:bg-[#8B4A28] transition-colors disabled:opacity-50"
           >
-            {loading ? "Sochh raha hai..." : "Mashware Lein"}
+            {loading ? "سوچ رہا ہے..." : "مشورہ لیں"}
           </button>
         </div>
 

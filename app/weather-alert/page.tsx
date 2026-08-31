@@ -65,25 +65,25 @@ export default function WeatherAlert() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans" dir="rtl">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           Zamindar<span className="text-[#B5622F]">AI</span>
         </Link>
         <Link href="/" className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors">
-          ← Wapis
+          ← واپس
         </Link>
       </header>
 
       <main className="max-w-2xl mx-auto px-8 py-12">
-        <h1 className="text-3xl font-bold mb-2">Weather Alert</h1>
+        <h1 className="text-3xl font-bold mb-2">موسم الرٹ</h1>
         <p className="text-[#5C4A38] mb-8">
-          Mausam dekh kar fasal ki hifazat ke mashware payein.
+          موسم دیکھ کر فصل کی حفاظت کے مشورے پائیں۔
         </p>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm text-[#5C4A38] block mb-1">Apna shehar chunein</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">اپنا شہر چنیں</label>
             <select
               value={selectedCity.name}
               onChange={(e) =>
@@ -104,7 +104,7 @@ export default function WeatherAlert() {
             disabled={loading}
             className="bg-[#B5622F] text-[#2A2118] font-semibold px-7 py-3 rounded-lg hover:bg-[#8B4A28] transition-colors disabled:opacity-50"
           >
-            {loading ? "Mausam check ho raha hai..." : "Mausam Dekhein"}
+            {loading ? "Mausam check ho raha hai..." : "موسم دیکھیں"}
           </button>
         </div>
 

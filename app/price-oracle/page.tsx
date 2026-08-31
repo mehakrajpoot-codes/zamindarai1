@@ -13,7 +13,7 @@ const crops = [
 
 export default function PriceOracle() {
   return (
-    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans" dir="rtl">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           Zamindar<span className="text-[#B5622F]">AI</span>
@@ -22,14 +22,14 @@ export default function PriceOracle() {
           href="/"
           className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors"
         >
-          ← Wapis
+          ← واپس
         </Link>
       </header>
 
       <main className="max-w-2xl mx-auto px-8 py-12">
-        <h1 className="text-3xl font-bold mb-2">Price Oracle</h1>
+        <h1 className="text-3xl font-bold mb-2">پرائس اوریکل</h1>
         <p className="text-[#5C4A38] mb-8">
-          Aaj ki mandi rates — sahi daam maloom karein, aarti se dhoka na khayein.
+          آج کی منڈی ریٹس — sahi daam maloom karein, aarti se dhoka na khayein.
         </p>
 
         <div className="space-y-3">

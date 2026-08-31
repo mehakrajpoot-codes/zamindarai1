@@ -57,7 +57,7 @@ export default function CropDoctor() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans" dir="rtl">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           Zamindar<span className="text-[#B5622F]">AI</span>
@@ -66,14 +66,14 @@ export default function CropDoctor() {
           href="/"
           className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors"
         >
-          ← Wapis
+          ← واپس
         </Link>
       </header>
 
       <main className="max-w-2xl mx-auto px-8 py-12">
-        <h1 className="text-3xl font-bold mb-2">Crop Doctor</h1>
+        <h1 className="text-3xl font-bold mb-2">کراپ ڈاکٹر</h1>
         <p className="text-[#5C4A38] mb-8">
-          Apni fasal ki problem batayein ya photo bhejein, AI aapko ilaj bataega.
+          اپنی فصل کی مشکل بتائیں یا تصویر بھیجیں، AI آپ کو علاج بتائے گا۔
         </p>
 
         <textarea
@@ -85,7 +85,7 @@ export default function CropDoctor() {
 
         <div className="mt-4">
           <label className="inline-flex items-center gap-2 border border-[#2A2118] px-4 py-2 rounded-lg cursor-pointer hover:bg-[#EDE3D0] transition-colors text-sm">
-            📷 Fasal ki tasveer lagayein
+            📷 فصل کی تصویر لگائیں
             <input
               type="file"
               accept="image/*"
@@ -122,10 +122,10 @@ export default function CropDoctor() {
           {loading ? (
             <>
               <span className="inline-block w-4 h-4 border-2 border-[#2A2118] border-t-transparent rounded-full animate-spin"></span>
-              Sochh raha hai... ({seconds}s)
+              سوچ رہا ہے... ({seconds}s)
             </>
           ) : (
-            "Poochein"
+            "پوچھیں"
           )}
         </button>
 

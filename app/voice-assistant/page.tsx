@@ -107,20 +107,20 @@ export default function VoiceAssistant() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans">
+    <div className="min-h-screen bg-[#F4EDE0] text-[#2A2118] font-sans" dir="rtl">
       <header className="flex items-center justify-between px-8 py-6 max-w-4xl mx-auto">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           Zamindar<span className="text-[#B5622F]">AI</span>
         </Link>
         <Link href="/" className="text-sm text-[#5C4A38] hover:text-[#2A2118] transition-colors">
-          ← Wapis
+          ← واپس
         </Link>
       </header>
 
       <main className="max-w-2xl mx-auto px-8 py-12 text-center">
-        <h1 className="text-3xl font-bold mb-2">Voice Assistant</h1>
+        <h1 className="text-3xl font-bold mb-2">آوازی اسسٹنٹ</h1>
         <p className="text-[#5C4A38] mb-10">
-          Bolein apni fasal ki problem, AI aawaz mein jawab dega.
+          بولیں اپنی فصل کی پرابلم، AI آواز میں جواب دے گا۔
         </p>
 
         <button
@@ -136,7 +136,7 @@ export default function VoiceAssistant() {
         </button>
 
         <p className="mt-4 text-sm text-[#5C4A38]">
-          {listening ? "Sun raha hoon... bolein" : loading ? `Sochh raha hoon... (${seconds}s)` : "Mic dabayein aur bolein"}
+          {listening ? "Sun raha hoon... bolein" : loading ? `Sochh raha hoon... (${seconds}s)` : "مائک دبائیں اور بولیں"}
         </p>
 
         {transcript && (
