@@ -10,6 +10,7 @@ const features_en = [
   { href: "/weather-alert", name: "Weather Alert", desc: "Live weather advice to protect your crop.", mark: "☁" },
   { href: "/soil-advisor", name: "Soil Advisor", desc: "Fertilizer and watering advice for your soil.", mark: "◆" },
   { href: "/voice-assistant", name: "Voice Assistant", desc: "Speak your problem, get a spoken AI answer.", mark: "◐" },
+  { href: "/crop-calendar", name: "Crop Calendar", desc: "Sowing to harvest schedule for your crop.", mark: "◷" },
 ];
 
 const features_ur = [
@@ -19,6 +20,7 @@ const features_ur = [
   { href: "/weather-alert", name: "موسم الرٹ", desc: "موسم دیکھ کر فصل کی حفاظت کے مشورے۔", mark: "☁" },
   { href: "/soil-advisor", name: "مٹی کا مشیر", desc: "مٹی اور خاد کے مشورے، بہتر پیداوار کے لئے۔", mark: "◆" },
   { href: "/voice-assistant", name: "آوازی اسسٹنٹ", desc: "بولیں اپنی پرابلم، AI آواز میں جواب دے گا۔", mark: "◐" },
+  { href: "/crop-calendar", name: "فصل کیلنڈر", desc: "بوائی سے کٹائی تک کا مکمل شیڈول۔", mark: "◷" },
 ];
 
 export default function Home() {
@@ -50,7 +52,7 @@ export default function Home() {
         </p>
         <h1 className="text-[2.75rem] sm:text-7xl leading-[1.05] tracking-tight max-w-3xl" style={{ fontFamily: isUr ? "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" : "Georgia, serif" }}>
           {isUr ? (
-            <>آپ کی فصل।<br /><span className="text-[#B5622F]">آپ کا دام।</span></>
+            <>آپ کی فصل۔<br /><span className="text-[#B5622F]">آپ کا دام۔</span></>
           ) : (
             <>Your crop.<br /><span className="text-[#B5622F]">Your price.</span></>
           )}
