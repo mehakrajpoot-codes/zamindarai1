@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const soilTypes = ["Chikni mitti (Clay)", "Reti (Sandy)", "Domat (Loamy)", "Pata nahi"];
-const crops = ["Gandum", "Chawal", "Kapas", "Ganna", "Makai", "Aloo", "Koi aur"];
+const soilTypes = ["چکنی مٹی", "ریتی مٹی", "دومٹ مٹی", "پتا نہیں"];
+const crops = ["گندم", "چاول", "کپاس", "گنا", "مکئی", "آلو", "کوئی اور"];
 
 export default function SoilAdvisor() {
   const [soilType, setSoilType] = useState(soilTypes[0]);
@@ -63,7 +63,7 @@ export default function SoilAdvisor() {
           </div>
 
           <div>
-            <label className="text-sm text-[#5C4A38] block mb-1">Fasal</label>
+            <label className="text-sm text-[#5C4A38] block mb-1">فصل</label>
             <select
               value={crop}
               onChange={(e) => setCrop(e.target.value)}
