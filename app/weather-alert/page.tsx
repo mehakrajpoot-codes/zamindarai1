@@ -4,12 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 
 const cities = [
-  { name: "Lahore", lat: 31.5497, lon: 74.3436 },
-  { name: "Faisalabad", lat: 31.4504, lon: 73.135 },
-  { name: "Multan", lat: 30.1575, lon: 71.5249 },
-  { name: "Rahim Yar Khan", lat: 28.4202, lon: 70.2952 },
-  { name: "Sahiwal", lat: 30.6682, lon: 73.1114 },
-  { name: "Bahawalpur", lat: 29.3956, lon: 71.6836 },
+  { name: "لاہور", lat: 31.5497, lon: 74.3436 },
+  { name: "فیصل آباد", lat: 31.4504, lon: 73.135 },
+  { name: "ملتان", lat: 30.1575, lon: 71.5249 },
+  { name: "رحیم یار خان", lat: 28.4202, lon: 70.2952 },
+  { name: "ساہیوال", lat: 30.6682, lon: 73.1114 },
+  { name: "بہاولپور", lat: 29.3956, lon: 71.6836 },
 ];
 
 export default function WeatherAlert() {
@@ -35,7 +35,7 @@ export default function WeatherAlert() {
         windSpeed: data.current.wind_speed_10m,
       });
     } catch (err) {
-      alert("Mausam ka data nahi mil saka, dobara koshish karein.");
+      alert("موسم کا ڈیٹا نہیں مل سکا، دوبارہ کوشش کریں۔");
     } finally {
       setLoading(false);
     }
@@ -46,19 +46,19 @@ export default function WeatherAlert() {
     const tips: string[] = [];
 
     if (weather.rainChance > 50) {
-      tips.push("Barish ka zyada imkaan hai — sprai ya khaad dalne se bachein.");
+      tips.push("بارش کا زیادہ امکان ہے — سپرے یا کھاد ڈالنے سے بچیں۔");
     } else {
-      tips.push("Barish ka imkaan kam hai — sprai karne ke liye theek waqt hai.");
+      tips.push("بارش کا امکان کم ہے — سپرے کرنے کے لیے ٹھیک وقت ہے۔");
     }
 
     if (weather.temp > 35) {
-      tips.push("Garmi zyada hai — fasal ko zyada paani dein, khaas kar sham ke waqt.");
+      tips.push("گرمی زیادہ ہے — فصل کو زیادہ پانی دیں، خاص کر شام کے وقت۔");
     } else if (weather.temp < 10) {
-      tips.push("Sardi ka khatra — nazuk paudon ko dhaank kar rakhein.");
+      tips.push("سردی کا خطرہ — نازک پودوں کو ڈھانک کر رکھیں۔");
     }
 
     if (weather.windSpeed > 25) {
-      tips.push("Hawa tez hai — abhi sprai na karein, dawa uD jayegi.");
+      tips.push("ہوا تیز ہے — ابھی سپرے نہ کریں، دوا اڑ جائے گی۔");
     }
 
     return tips;
@@ -104,7 +104,7 @@ export default function WeatherAlert() {
             disabled={loading}
             className="bg-[#B5622F] text-[#2A2118] font-semibold px-7 py-3 rounded-lg hover:bg-[#8B4A28] transition-colors disabled:opacity-50"
           >
-            {loading ? "Mausam check ho raha hai..." : "موسم دیکھیں"}
+            {loading ? "موسم چیک ہو رہا ہے..." : "موسم دیکھیں"}
           </button>
         </div>
 
@@ -112,26 +112,26 @@ export default function WeatherAlert() {
           <div className="mt-8 space-y-4">
             <div className="bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-6">
               <p className="text-[#B5622F] text-sm font-medium mb-4">
-                {selectedCity.name} ka mausam
+                {selectedCity.name} کا موسم
               </p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <p className="text-2xl font-bold">{weather.temp}°C</p>
-                  <p className="text-xs text-[#5C4A38]">Temperature</p>
+                  <p className="text-xs text-[#5C4A38]">درجہ حرارت</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold">{weather.rainChance}%</p>
-                  <p className="text-xs text-[#5C4A38]">Barish ka chance</p>
+                  <p className="text-xs text-[#5C4A38]">بارش کا امکان</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold">{weather.windSpeed}</p>
-                  <p className="text-xs text-[#5C4A38]">Hawa (km/h)</p>
+                  <p className="text-xs text-[#5C4A38]">ہوا (کلومیٹر فی گھنٹہ)</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-[#EDE3D0] border border-[#B5622F] rounded-lg p-6">
-              <p className="text-[#B5622F] text-sm font-medium mb-3">Mashware</p>
+              <p className="text-[#B5622F] text-sm font-medium mb-3">مشورہ</p>
               <ul className="space-y-2 text-sm">
                 {getAdvice()?.map((tip, i) => (
                   <li key={i} className="text-[#2A2118]">• {tip}</li>
