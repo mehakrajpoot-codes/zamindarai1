@@ -3,12 +3,12 @@
 import Link from "next/link";
 
 const crops = [
-  { name: "Gandum (Wheat)", rate: "3,200", unit: "40 kg", trend: "up" },
-  { name: "Chawal (Rice) - Basmati", rate: "4,800", unit: "40 kg", trend: "down" },
-  { name: "Kapas (Cotton)", rate: "8,500", unit: "40 kg", trend: "up" },
-  { name: "Ganna (Sugarcane)", rate: "400", unit: "40 kg", trend: "stable" },
-  { name: "Makai (Corn)", rate: "2,100", unit: "40 kg", trend: "up" },
-  { name: "Aloo (Potato)", rate: "1,800", unit: "40 kg", trend: "down" },
+  { name: "گندم", rate: "3,200", unit: "40 کلو", trend: "up" },
+  { name: "چاول (باسمتی)", rate: "4,800", unit: "40 کلو", trend: "down" },
+  { name: "کپاس", rate: "8,500", unit: "40 کلو", trend: "up" },
+  { name: "گنا", rate: "400", unit: "40 کلو", trend: "stable" },
+  { name: "مکئی", rate: "2,100", unit: "40 کلو", trend: "up" },
+  { name: "آلو", rate: "1,800", unit: "40 کلو", trend: "down" },
 ];
 
 export default function PriceOracle() {
@@ -29,7 +29,7 @@ export default function PriceOracle() {
       <main className="max-w-2xl mx-auto px-8 py-12">
         <h1 className="text-3xl font-bold mb-2">پرائس اوریکل</h1>
         <p className="text-[#5C4A38] mb-8">
-          آج کی منڈی ریٹس — sahi daam maloom karein, aarti se dhoka na khayein.
+          آج کی منڈی ریٹس — صحیح دام معلوم کریں، آڑتی سے دھوکا نہ کھائیں۔
         </p>
 
         <div className="space-y-3">
@@ -40,16 +40,16 @@ export default function PriceOracle() {
             >
               <div>
                 <p className="font-medium">{crop.name}</p>
-                <p className="text-sm text-[#5C4A38]">fi {crop.unit}</p>
+                <p className="text-sm text-[#5C4A38]">فی {crop.unit}</p>
               </div>
               <div className="text-right">
                 <p className="text-lg font-semibold text-[#B5622F]">
                   Rs {crop.rate}
                 </p>
                 <p className="text-xs text-[#5C4A38]">
-                  {crop.trend === "up" && "▲ Barh raha hai"}
-                  {crop.trend === "down" && "▼ Gir raha hai"}
-                  {crop.trend === "stable" && "● Mustahkam"}
+                  {crop.trend === "up" && "▲ بڑھ رہا ہے"}
+                  {crop.trend === "down" && "▼ گر رہا ہے"}
+                  {crop.trend === "stable" && "● مستحکم"}
                 </p>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function PriceOracle() {
         </div>
 
         <p className="mt-8 text-xs text-[#5C4A38] text-center">
-          Rates roughly aaj ki mandi ke mutabiq hain. Demo data.
+          ریٹس تقریباً آج کی منڈی کے مطابق ہیں۔ ڈیمو ڈیٹا۔
         </p>
       </main>
     </div>
