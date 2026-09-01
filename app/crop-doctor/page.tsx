@@ -47,7 +47,7 @@ export default function CropDoctor() {
       setAnswer(data.answer || data.error);
     } catch (err) {
       setAnswer(
-        "AI abhi thoda busy hai (free service hai, kabhi kabhi der lagti hai). Dobara koshish karein."
+        "AI ابھی تھوڑا مصروف ہے، دوبارہ کوشش کریں۔"
       );
     } finally {
       clearTimeout(timeoutId);
@@ -79,7 +79,7 @@ export default function CropDoctor() {
         <textarea
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder="Jaise: meri gandum ki fasal par zard dhabbay aa rahe hain... (ya sirf photo bhejein)"
+          placeholder="جیسے: میری گندم کی فصل پر زرد دھبے آ رہے ہیں... (یا صرف تصویر بھیجیں)"
           className="w-full h-32 bg-[#EDE3D0] border border-[#2A2118] rounded-lg p-4 text-[#2A2118] placeholder-[#5C4A38] focus:outline-none focus:border-[#B5622F] resize-none"
         />
 
@@ -109,7 +109,7 @@ export default function CropDoctor() {
               }}
               className="mt-2 text-xs text-[#5C4A38] hover:text-[#2A2118]"
             >
-              ✕ Tasveer hatayein
+              ✕ تصویر ہٹائیں
             </button>
           </div>
         )}
@@ -122,7 +122,7 @@ export default function CropDoctor() {
           {loading ? (
             <>
               <span className="inline-block w-4 h-4 border-2 border-[#2A2118] border-t-transparent rounded-full animate-spin"></span>
-              سوچ رہا ہے... ({seconds}s)
+              سوچ رہا ہے... ({seconds} سیکنڈ)
             </>
           ) : (
             "پوچھیں"
@@ -131,7 +131,7 @@ export default function CropDoctor() {
 
         {loading && (
           <p className="mt-3 text-xs text-[#5C4A38]">
-            AI jawab taiyar kar raha hai, thora intezar karein...
+            AI جواب تیار کر رہا ہے، تھوڑا انتظار کریں...
           </p>
         )}
 
