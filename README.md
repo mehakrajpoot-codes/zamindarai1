@@ -43,6 +43,11 @@ ZamindarAI puts seven practical tools in one place, in **Urdu script with right-
 
 ## Screenshots
 
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="ZamindarAI landing page in Urdu with English toggle" width="85%" /><br />
+  <sub><b>Landing page</b>: Urdu-first with an English toggle</sub>
+</p>
+
 <table>
   <tr>
     <td align="center" width="50%">
@@ -50,24 +55,28 @@ ZamindarAI puts seven practical tools in one place, in **Urdu script with right-
       <sub><b>Crop Doctor</b>: describe the problem or upload a photo</sub>
     </td>
     <td align="center" width="50%">
-      <img src="docs/screenshots/soil-advisor.png" alt="Soil Advisor" /><br />
-      <sub><b>Soil Advisor</b>: fertilizer and irrigation advice by soil type</sub>
+      <img src="docs/screenshots/price-oracle.png" alt="Price Oracle" /><br />
+      <sub><b>Price Oracle</b>: mandi rates with price trends</sub>
     </td>
   </tr>
   <tr>
-    <td align="center" width="50%">
-      <img src="docs/screenshots/weather-alert.png" alt="Weather Alert" /><br />
-      <sub><b>Weather Alert</b>: live weather turned into crop advice</sub>
-    </td>
     <td align="center" width="50%">
       <img src="docs/screenshots/deal-guardian.png" alt="Deal Guardian" /><br />
       <sub><b>Deal Guardian</b>: sale agreements saved to the database</sub>
     </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/weather-alert.png" alt="Weather Alert" /><br />
+      <sub><b>Weather Alert</b>: live weather turned into crop advice</sub>
+    </td>
   </tr>
   <tr>
-    <td align="center" colspan="2">
-      <img src="docs/screenshots/crop-calendar.png" alt="Crop Calendar" width="50%" /><br />
+    <td align="center" width="50%">
+      <img src="docs/screenshots/crop-calendar.png" alt="Crop Calendar" /><br />
       <sub><b>Crop Calendar</b>: sowing-to-harvest schedule</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/voice-assistant.png" alt="Voice Assistant" /><br />
+      <sub><b>Voice Assistant</b>: speak the problem, hear the answer</sub>
     </td>
   </tr>
 </table>
